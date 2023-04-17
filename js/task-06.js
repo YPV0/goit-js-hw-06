@@ -5,9 +5,12 @@ function toggleClasses(element, classToRemove, classToAdd) {
   element.classList.add(classToAdd);
 }
 
-inputEl.addEventListener('blur', () => {
+inputEl.addEventListener('blur', onBlur);
+
+function onBlur() {
   const isInputValid = inputEl.value.length === Number(inputEl.dataset.length);
   const classToRemove = isInputValid ? 'invalid' : 'valid';
   const classToAdd = isInputValid ? 'valid' : 'invalid';
   toggleClasses(inputEl, classToRemove, classToAdd);
-});
+}
+
