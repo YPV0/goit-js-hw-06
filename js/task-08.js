@@ -4,9 +4,9 @@ const emailEl = document.querySelector('input[type="email"]');
 const passwordEl = document.querySelector('input[type="password"]');
 const userDataPE = {};
 
-submitBtnEl.addEventListener('click', onsubmit);
+submitBtnEl.addEventListener('click', onSubmit);
 
-function onsubmit(event) {
+function onSubmit(event) {
   event.preventDefault();   
   if (emailEl.value.trim().length === 0) {
   alert('Введіть свій email');
